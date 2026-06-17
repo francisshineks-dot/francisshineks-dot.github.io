@@ -1,153 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oscar Earthing Solutions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oscar Engineering</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
+<style>
+body { margin:0; font-family:'Segoe UI', sans-serif; background:#f4f6f9; }
 
-    header {
-      background: #0d1b2a;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
+/* NAV */
+nav {
+  background:#0a1f2e;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+}
+.logo {
+  display:flex;
+  align-items:center;
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+}
+.logo img { height:45px; margin-right:10px; }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
+nav a { color:white; margin:10px; text-decoration:none; }
 
-    header p {
-      font-size: 18px;
-      margin-top: 10px;
-    }
+/* HERO */
+header {
+  text-align:center;
+  color:white;
+  padding:100px 20px;
+  background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+             url('background.jpg');
+  background-size:cover;
+}
+header img { height:80px; }
 
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.btn {
+  background:#d18b00;
+  color:white;
+  padding:10px 20px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
 
-    .products {
-      background: #f5f5f5;
-    }
+/* SECTION */
+section { padding:60px 20px; text-align:center; }
 
-    .product {
-      margin-bottom: 25px;
-    }
+/* PRODUCTS */
+.products {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
 
-    .product h3 {
-      margin-bottom: 5px;
-    }
+.card {
+  background:white;
+  width:300px;
+  margin:15px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
 
-    footer {
-      background: #0d1b2a;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+.card img {
+  width:100%;
+  height:auto;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #e63946;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-  </style>
+.card-body {
+  padding:15px;
+  text-align:left;
+}
+
+.more-text { display:none; }
+
+.more-btn {
+  background:none;
+  border:none;
+  color:#007bff;
+  cursor:pointer;
+}
+
+/* CONTACT */
+form input, form textarea {
+  width:260px;
+  padding:10px;
+  margin:8px;
+}
+
+/* MAP */
+.map {
+  width:100%;
+  height:350px;
+  border:0;
+  margin-top:20px;
+}
+
+/* FOOTER */
+footer {
+  background:#0a1f2e;
+  color:white;
+  padding:20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
+</style>
+
+<script>
+function toggleText(id){
+  let el = document.getElementById(id);
+  el.style.display = (el.style.display === "block") ? "none" : "block";
+}
+</script>
+
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <img src="logo.png">
+    Oscar Engineering
+  </div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
 <header>
-  <h1>Oscar Earthing Solutions</h1>
-  <p>Complete Protection from Lightning & Earthing</p>
-  <a href="brochure.pdf" class="btn">Download Brochure</a>
+  <img src="logo.png">
+  <h1>Oscar Engineering</h1>
+  <p>Complete Protection from Lightning & Earthing Solutions</p>
+
+  <button class="btn" onclick="document.getElementById('products').scrollIntoView()">View Products</button>
+
+  <br><br>
+
+  <a href="Oscar Earth Compound Brochure-3.pdf" download>
+    <button class="btn">Download Brochure</button>
+  </a>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
   <h2>About Us</h2>
   <p>
-    With over 40 years of combined experience in electroplating and manufacturing,
-    we specialize in high-quality earthing and grounding solutions. 
-    Our journey began in Goa and expanded to Kerala, serving industries including Siemens, Godrej, and Crompton.
-  </p>
-
-  <p>
-    We deliver durable, corrosion-resistant products designed for long-term performance 
-    in industrial, commercial, and infrastructure applications.
+   With 40 years of combined experience in manufacturing and electroplating, we are a trusted manufacturer of earthing and grounding solutions. Our company was founded in Goa, where we built strong expertise in industrial electroplating, serving leading organizations such as Siemens, Godrej, and Crompton, along with antique and vintage vehicle restoration projects that demanded high precision and durability.
+In 2009, we expanded to Choondal, Kerala. While our operations initially focused on electroplating, we evolved to meet industry needs and today specialize in the manufacturing of high quality earthing products. Supported by our in depth electroplating expertise, we ensure superior corrosion resistance, conductivity, and long service life.
+Our product range includes Earth Rods, Lightning Arrestors, Earth Chambers, and Terminal Strips, manufactured to meet safety and performance standards for industrial and infrastructure applications.
+Built on experience, engineering knowledge, and quality driven processes, we deliver reliable earthing solutions designed to last.
   </p>
 </section>
 
-<section>
-  <h2>Vision & Mission</h2>
-  <p><strong>Vision:</strong> To be a trusted manufacturer of earthing solutions known for quality and reliability.</p>
+<!-- PRODUCTS -->
+<section id="products">
+<h2>Our Products</h2>
 
-  <p><strong>Mission:</strong></p>
-  <ul>
-    <li>Deliver high-quality and durable products</li>
-    <li>Improve product life through electroplating expertise</li>
-    <li>Continuously innovate manufacturing processes</li>
-    <li>Build long-term customer relationships</li>
-  </ul>
-</section>
+<div class="products">
 
-<section class="products">
-  <h2>Our Products</h2>
-
-  <div class="product">
+<!-- 1 -->
+<div class="card">
+  <img src="images/lightning.jpg">
+  <div class="card-body">
     <h3>Lightning Arrester</h3>
-    <p>Multi-spike copper bonded design for efficient lightning protection.</p>
+    <p>Efficient lightning protection system.</p>
+    <span id="p1" class="more-text">
+      The Oscar Copper Bonded Lightning Arrester is engineered to provide reliable and efficient lightning protection for buildings and critical infrastructure. It features a air terminal design manufactured with 99.9% pure electrolytic grade copper bonding to ensure excellent conductivity and fast dissipation of lightning currents. The arrester is built with a stainless steel core, nylon insulated base, and uniform copper coating of 250/100 microns (average), offering superior corrosion resistance and long service life. Designed in compliance with IS/IEC 62305 3:2010 and IEC 62561 2:2018, it is ideal for industrial, commercial, and residential lightning protection systems. Product is available in single spike and multi spike.
+    </span><br>
+    <button class="more-btn" onclick="toggleText('p1')">Read More</button>
   </div>
+</div>
 
-  <div class="product">
+<!-- 2 -->
+<div class="card">
+  <img src="images/earthrod.jpg">
+  <div class="card-body">
     <h3>Earth Rod</h3>
-    <p>High conductivity rod with strong steel core and corrosion resistance.</p>
-  </div>
+    <p>High conductivity grounding rod.</p>
+    <span id="p2" class="more-text">
+       Copper Bonded Earth Rod (12 mm, 100 Microns) is engineered for efficient and dependable earthing systems. It features a high-tensile steel core with a uniformly bonded 100-micron copper coating for excellent electrical conductivity and superior corrosion resistance. Designed for long service life and consistent performance, it is suitable for industrial, commercial, residential, and lightning protection applications. Easy to install and low in maintenance, it ensures safe and reliable grounding.
 
-  <div class="product">
+The product is available in different lengths: 2,3,4 and 5 Feet
+    </span><br>
+    <button class="more-btn" onclick="toggleText('p2')">Read More</button>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+  <img src="images/compound.jpg">
+  <div class="card-body">
     <h3>Earthing Compound</h3>
-    <p>Improves soil conductivity and ensures stable earthing performance.</p>
-  </div>
+    <p>Improves grounding performance.</p>
+    <span id="p3" class="more-text">
+      Oscar Earthing Electrical Compound is a high quality, mineral based compound engineered to significantly reduce soil resistivity and enhance the performance of earthing and grounding systems. Designed for consistent results across all seasons, it absorbs and retains moisture effectively, ensuring stable earth resistance even in dry conditions.
+Non corrosive and environmentally safe, Oscar Earthing Compound protects earth electrodes from corrosion while improving electrical conductivity around the grounding area. With a service life of over 25 years, it is an ideal solution for residential, commercial, industrial, solar, and infrastructure earthing applications.
 
-  <div class="product">
+Available in 5 KG and 8 KG bags.
+    </span><br>
+    <button class="more-btn" onclick="toggleText('p3')">Read More</button>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <img src="images/plate.jpg">
+  <div class="card-body">
+    <h3>Earth Plate</h3>
+    <p>Large surface grounding solution.</p>
+    <span id="p4" class="more-text">
+      Oscar Engineering Copper Bonded Earth Plates are manufactured from high conductivity copper bonded material to deliver efficient and long lasting grounding performance in varied soil conditions. Designed with a large surface contact area, these plates ensure effective dissipation of fault currents and lightning surges, particularly where earth rods cannot be installed. The copper bonded construction provides excellent corrosion resistance and durability, making them suitable for residential, commercial, industrial, and lightning protection earthing systems. Available in multiple standard sizes for diverse installation requirements.
+
+Available sizes
+600*600
+300*300
+    </span><br>
+    <button class="more-btn" onclick="toggleText('p4')">Read More</button>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+  <img src="images/pipe.jpg">
+  <div class="card-body">
+    <h3>Earthing Pipe</h3>
+    <p>Reliable grounding pipe.</p>
+    <span id="p5" class="more-text">
+     Earth Pipe is a reliable and economical solution for effective electrical grounding. Manufactured from high quality galvanized iron, it provides good mechanical strength, corrosion resistance, and efficient dissipation of fault currents into the ground. Suitable for residential, commercial, and industrial earthing systems, it ensures safe and stable grounding performance.
+
+Oscar offers three earthing pipe variants in 1 meter and 1.5 meter lengths:
+GI Earthing Pipe, Compound Filled Earthing Pipe, and Copper Bonded Earthing Pipe, allowing flexibility to suit different soil and application requirements.
+    </span><br>
+    <button class="more-btn" onclick="toggleText('p5')">Read More</button>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+  <img src="images/terminal.jpg">
+  <div class="card-body">
     <h3>Terminal Strip</h3>
-    <p>Copper bars for reliable grounding connections.</p>
+    <p>Safe earthing connections.</p>
+    <span id="p6" class="more-text">
+      The Earth Bench / Terminal Strip is manufactured using a high conductivity copper or copper plated bar with a standard width of 25 mm and a thickness of 4 mm, ensuring excellent current carrying capacity. It is mounted on insulated holders for safe and secure installation and is designed to allow easy connection and disconnection of earth conductors. The terminal strip offers minimal risk of bi metallic corrosion, providing long service life even in demanding environments. Manufactured in accordance with applicable IEC guidelines, it delivers reliable electrical conductivity and robust mechanical strength for long term earthing and equipotential bonding applications.
+
+Available in 4 hole, 6 hole, 8 hole, 10 hole and 12 hole configurations to suit different earthing system requirements.
+    </span><br>
+    <button class="more-btn" onclick="toggleText('p6')">Read More</button>
   </div>
+</div>
 
-  <div class="product">
-    <h3>Earth Plates & Accessories</h3>
-    <p>Durable components for complete earthing systems.</p>
+<!-- 7 -->
+<div class="card">
+  <img src="images/pit.jpg">
+  <div class="card-body">
+    <h3>Earth Pit Chamber</h3>
+    <p>Inspection chamber.</p>
+    <span id="p7" class="more-text">
+      Earth Inspection Pit Chamber is manufactured from high density, UV stable polymer material to ensure long term resistance against weathering, soil conditions, aging, and cracking. The square type chamber provides safe enclosure and easy access for inspection, testing, and maintenance of earthing and lightning protection systems. Supplied as a ready made unit with a removable lid, it eliminates the need for on site masonry work and enables quick installation. Designed for dependable performance in residential, commercial, and industrial applications, the chamber complies with IEC 62561 5 standards and is dimensioned approximately 24 × 18 × 21 cm.
+    </span><br>
+    <button class="more-btn" onclick="toggleText('p7')">Read More</button>
   </div>
+</div>
+
+<!-- 8 -->
+<div class="card">
+  <img src="images/clip.jpg">
+  <div class="card-body">
+    <h3>Nylon Cable Holder Clip</h3>
+    <p>Cable fixing solution.</p>
+    <span id="p8" class="more-text">
+      Nylon Cable Holder Clip
+For 50 mm² Aluminium Earthing Cable
+Ensure reliable and secure cable management with our Nylon Cable Holder Clip, specifically designed for 50 mm² aluminium earthing cables. Manufactured from high-quality nylon, this clip offers exceptional strength, durability, and resistance to harsh environmental conditions.
+Engineered for both indoor and outdoor applications, its UV-resistant and corrosion-proof properties make it ideal for use in electrical, solar, and grounding systems. The clip provides a firm grip to keep cables neatly fixed in place, reducing movement and enhancing installation safety and longevity.
+With a lightweight design and easy installation options (screw or adhesive mounting), this cable holder ensures convenience without compromising on performance. It is the perfect choice for professionals seeking a dependable and cost-effective solution for structured cable routing.
+
+Designed for 50 mm² aluminium earthing cables
+    </span><br>
+    <button class="more-btn" onclick="toggleText('p8')">Read More</button>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Us</h2>
+
+<p>Choondal, Kerala, India</p>
+
+<h3>Send Enquiry</h3>
+
+<form action="https://formsubmit.co/oscarelectroplaters@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required><br>
+  <input type="email" name="email" placeholder="Your Email" required><br>
+  <textarea name="message" placeholder="Message" required></textarea><br>
+  <button class="btn">Send</button>
+</form>
+
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.4114089657273!2d76.09672591131844!3d10.625112389470921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ead845581463%3A0x5fc28fed42e395e9!2sOscar%20Engineering!5e0!3m2!1snl!2snl!4v1781685057619!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </section>
 
-<section>
-  <h2>View Our Brochure</h2>
-  <iframe src="brochure.pdf" width="100%" height="500px"></iframe>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <p>
-    Oscar Engineering<br>
-    Thrissur Road, Choondal<br>
-    Kerala, India
-  </p>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Oscar Earthing Solutions</p>
+  © 2026 Oscar Engineering
 </footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919400362129" class="whatsapp">💬</a>
 
 </body>
 </html>
